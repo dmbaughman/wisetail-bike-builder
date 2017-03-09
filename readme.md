@@ -2,11 +2,10 @@
 ## Welcome to Bike Builder
 
 Bike Builder is a sample problem that Wisetail uses during the interview process. 
-This problem has two goals: 
+This problem has one goal: Provide a shared foundation for us to talk with you about code. 
 
-1. Prove you can code in Laravel 
+Give the problem a try and if you can't get it working, no problem! We are much more interested in talking through how far you got than seeing working code.
 
-2. Provide a shared foundation for us to talk with you about code. 
 
 ## Getting Started
 
@@ -45,3 +44,27 @@ We will be using a sqlite database.To set this up,from the wisetail-bike-builder
     php artisan db:seed
 
 At this point we should have a working API with dummy data set up for us to interact with. Navigating to http://localhost:8000/api/bikes should return a set of Bike JSON objects. 
+
+## The Problem
+
+Bike Builder is an API for, you guessed it, building bikes. A Bike is made up of various components and we can mix and match these components to make different bikes. 
+So far, we have only added functionality for frames and wheels. You can see that the JSON Bike object has nested resources for both frames and wheels. 
+
+We need to extend this API to allow us to add a Seat to a Bike. Your job is to add a Seat resource and create the relationship between the Seat and Bike.
+Through the API, you should be able to:
+
+    :View all Seats
+    :View a single Seat
+    :Create a Seat
+    :Update a Seat
+    :Delete a Seat
+    :Add a Seat to a Bike
+
+A Seat only has one attribute:
+
+    -Material ex. Leather
+
+**Notes**
+In order to add the resource you will need to add a new Model and Controller, add a new database table, add new routes, add the relationship to the Bike model and Bike database table.
+
+
