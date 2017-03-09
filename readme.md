@@ -22,7 +22,7 @@ may be different in a Windows environment.
     cd wisetail-bike-builder
     composer install
 
-**Step 3: Rename the .env.example to .env and generate a unique larvel project key.**
+**Step 3: Rename the .env.example file to .env and generate a unique larvel project key.**
 
     cp .env.example .env
     php artisan key:generate
@@ -37,7 +37,7 @@ After you run the above command you should be able reach http://localhost:8000/ 
 
 **Step 5: Set Up the Database.**
 
-We will be using a sqlite database.To set this up,from the wisetail-bike-builder directory run:
+We will be using a sqlite database.To set this up, from the wisetail-bike-builder directory run:
 
     touch database/database.sqlite
     php artisan migrate
@@ -60,9 +60,38 @@ Through the API, you should be able to:
     Delete a Seat
     Add a Seat to a Bike
 
-A Seat only has one attribute:
+Once you have added the Seat resource, a call to the http://localhost:8000/api/bikes should return a Bike JSON Object that looks like:
 
-    -Material (ex. Leather)
+    {
+        "id": 2,
+        "brand": "harum",
+        "model": "minus",
+        "frame_id": "2",
+        "wheel_id": "2",
+        "seat_id": "1",
+        "created_at": "2017-03-09 19:48:51",
+        "updated_at": "2017-03-09 19:48:51",
+        "frame": {
+            "id": 2,
+            "size": "L",
+            "color": "gray",
+            "material": "titanium",
+            "created_at": "2017-03-09 19:48:51",
+            "updated_at": "2017-03-09 19:48:51"
+        },
+        "wheel": {
+            "id": 2,
+            "size": "29",
+            "created_at": "2017-03-09 19:48:51",
+            "updated_at": "2017-03-09 19:48:51"
+        },
+        "seat": {
+            "id": 1,
+            "material": "leather",
+            "created_at": "2017-03-09 19:48:51",
+            "updated_at": "2017-03-09 19:48:51"
+        }
+    }
 
 **Notes**
 In order to add the resource you will need to add a new Model and Controller, add a new database table, add new routes, add the relationship to the Bike model and Bike database table.
