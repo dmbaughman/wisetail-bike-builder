@@ -2,7 +2,9 @@
 ## Welcome to Bike Builder
 
 Bike Builder is a sample problem that Wisetail uses during the interview process. 
-This problem has two goals: 1) Prove you can code in Laravel 2) Provide a shared foundation for us to talk with you about code. 
+This problem has two goals: 
+1. Prove you can code in Laravel 
+2. Provide a shared foundation for us to talk with you about code. 
 
 ## Get Started
 
