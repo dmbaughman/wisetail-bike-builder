@@ -11,9 +11,13 @@ This problem has two goals:
 ## Get Started
 
 Step 1: Download or Clone this repo onto your machine. 
+
 Step 2: Inside the project folder, run composer update.
+
 Step 3: Run php artisan serve.
+
 Step 4: Run database migrations. 
+
 Step 5: Run database seeder.
 
 At this point, you should have a running api. You can test this by hitting X endpoint. 
