@@ -22,3 +22,28 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(App\Bike::class, function (Faker\Generator $faker) {
+
+    return [
+        'brand' => $faker->word,
+        'model' => $faker->word,
+    ];
+});
+
+$factory->define(App\Frame::class, function (Faker\Generator $faker) {
+
+    return [
+        'size' => $faker->randomElement($array = ['XS', 'S', 'M', 'L', 'XL']),
+        'color' => $faker->safeColorName,
+        'material' => $faker->randomElement($array = ['carbon fiber', 'aluminum', 'titanium', 'steel']),
+    ];
+});
+
+$factory->define(App\Wheel::class, function (Faker\Generator $faker) {
+
+    return [
+        'size' => $faker->randomElement($array = ['29', '27.5', '27.5+', '26']),
+    ];
+});
