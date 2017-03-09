@@ -53,16 +53,16 @@ So far, we have only added functionality for frames and wheels. You can see that
 We need to extend this API to allow us to add a Seat to a Bike. Your job is to add a Seat resource and create the relationship between the Seat and Bike.
 Through the API, you should be able to:
 
-    *View all Seats
-    *View a single Seat
-    *Create a Seat
-    *Update a Seat
-    *Delete a Seat
-    *Add a Seat to a Bike
+    View all Seats
+    View a single Seat
+    Create a Seat
+    Update a Seat
+    Delete a Seat
+    Add a Seat to a Bike
 
 A Seat only has one attribute:
 
-    -Material ex. Leather
+    -Material (ex. Leather)
 
 **Notes**
 In order to add the resource you will need to add a new Model and Controller, add a new database table, add new routes, add the relationship to the Bike model and Bike database table.
