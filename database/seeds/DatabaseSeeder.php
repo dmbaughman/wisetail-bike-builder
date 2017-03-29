@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
        $this->call(BikeTableSeeder::class);
        $this->call(FramesTableSeeder::class);
        $this->call(WheelsTableSeeder::class);
+       $this->call(SeatsTableSeeder::class);
     }
 }

@@ -9,12 +9,12 @@ class BikesController extends Controller
 {
     public function index()
     {
-        return Bike::with('frame', 'wheel')->get();
+        return Bike::with('frame', 'wheel', 'seat')->get();
     }
 
     public function show($bike_id)
     {
-        return Bike::with('frame', 'wheel')->get()->find($bike_id);
+        return Bike::with('frame', 'wheel', 'seat')->get()->find($bike_id);
     }
 
     public function store(Request $request)
