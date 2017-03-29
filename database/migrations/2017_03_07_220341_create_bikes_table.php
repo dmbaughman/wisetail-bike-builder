@@ -19,6 +19,7 @@ class CreateBikesTable extends Migration
             $table->string('model');
             $table->integer('frame_id')->nullable();
             $table->integer('wheel_id')->nullable();
+            $table->integer('seat_id')->nullable();
 
             //adds updated_at and created_at columns
             $table->timestamps();
