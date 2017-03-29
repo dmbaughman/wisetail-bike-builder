@@ -34,3 +34,9 @@ Route::delete('/wheels/{id}', 'WheelsController@destroy');
 /*
  * Add Routes for Seats
  */
+
+Route::get('/seats',         'SeatsController@index');
+Route::get('/seats/{id}',    'SeatsController@show');
+Route::post('/seats',        'SeatsController@store');
+Route::patch('/seats/{id}',  'SeatsController@update');
+Route::delete('/seats/{id}', 'SeatsController@destroy');
