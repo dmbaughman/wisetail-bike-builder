@@ -47,3 +47,10 @@ $factory->define(App\Wheel::class, function (Faker\Generator $faker) {
         'size' => $faker->randomElement($array = ['29', '27.5', '27.5+', '26']),
     ];
 });
+
+$factory->define(App\Seat::class, function (Faker\Generator $faker) {
+
+    return [
+        'material' => $faker->randomElement($array = ['leather', 'nylon', 'carbon fiber']),
+    ];
+});
